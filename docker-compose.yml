@@ -1,19 +1,35 @@
 version: '3'
 services:
   web:
+<<<<<<< HEAD
     build: 
       context: .
       dockerfile: Dockerfile.dev
     ports:
+=======
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports: 
+>>>>>>> e3a7b1e580173f08227f36636bc1390335050de4
       - "3000:3000"
     volumes:
       - /app/node_modules
       - .:/app
   tests:
     build:
+<<<<<<< HEAD
        context: .
        dockerfile: Dockerfile.dev
     volumes:
       - /app/node_modules
       - .:/app   
     command: ["npm", "run", "test"]       
+=======
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]
+>>>>>>> e3a7b1e580173f08227f36636bc1390335050de4
